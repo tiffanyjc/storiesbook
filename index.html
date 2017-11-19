@@ -1,20 +1,61 @@
 <head>
-<link rel="stylesheet" type="text/css" href="main.css"> 
+<link rel="stylesheet" type="text/css" href="main-2.css"> 
 </head>
 <body>
+    
+    
     <div class="text"> 
-    weoifwoiefjew
+    <h1> 12 : Did you have irrational fears as a child?</h1>
+        
+        <p>
+            When I was a little kid, I was terrified I was going to get sucked into a black hole. 
+        </p>
+        <p>
+            At one point during my elementary school career, we were learning about space and we had to choose a space-related topic to do research on. So I chose black holes! 
+
+        </p>
+        <P>
+            Once I learned enough about them, I thought Oh my god, they can open up anywhere at any time. And I could get sucked into one at any time! 
+        </P>
+        
+
     </div>
     <div class="parallax">
-        <div class="parallax__layer parallax__layer--back">
-            <img src="disney-3.png"> 
+        <div id="l5" class="parallax__layer parallax__layer--5" data-type="parallax" data-depth=".1">
+            
+        <div id="l4" class="parallax__layer parallax__layer--4" data-type="parallax" data-depth=".3">
+<!--            <img src="fears-blackhole-4.png"> -->
         </div>
-        <div class="parallax__layer parallax__layer--middle">
-            <img src="disney-2.png"> 
+        <div id="l3" class="parallax__layer parallax__layer--3" data-type="parallax" data-depth=".5">
+<!--            <img src="fears-blackhole-3.png"> -->
         </div>
-        <div class="parallax__layer parallax__layer--base">
-            <img src="disney-1.png"> 
+        <div id="l2" class="parallax__layer parallax__layer--2" data-type="parallax" data-depth=".8">
+<!--            <img src="fears-blackhole-2.png"> -->
+        </div>
+        <div id="l1" class="parallax__layer parallax__layer--1" data-type="parallax" data-depth="1">
+<!--            <img src="fears-blackhole-1.png"> -->
         </div>
     </div>
+    
+    
+    <script> 
+        window.addEventListener("scroll", function() {
+            var topDistance = window.pageYOffset; 
+            var layers = ["l4", "l3", "l2", "l1"]; 
+            
+            for (l in layers) {
+                console.log(layers[l]); 
+                var layer = document.getElementById(layers[l]); 
+                var depth = layer.dataset.depth; 
+                var movement = -(topDistance * depth); 
+                var translate3d = 'translate3d(0, ' + movement + 'px, 0)'
+                layer.style.webkitTransform = translate3d; 
+                layer.style.mozTransform = translate3d; 
+                layer.transform = translate3d; 
+            }
+            });
+        
+        
+    </script>
 </body>
 

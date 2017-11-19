@@ -1,0 +1,75 @@
+body {
+    height: 2000px; 
+    
+}
+
+.parallax {
+    height: 100vh;
+    width: 100vw; 
+    overflow: hidden;
+    overflow-y: hidden;
+    position: absolute; 
+    top: 0px; 
+    right: 0px; 
+}
+.parallax__layer {
+    background-position: bottom right; 
+    background-size:contain; 
+    background-repeat: no-repeat; 
+    width: 100vw; 
+    height: 100vh;
+    position: fixed; 
+    z-index: -1; 
+}
+
+.parallax__layer img {
+    width: 100%; 
+}
+.parallax__layer--1 {
+    background-image: url('fears-blackhole-1.png'); 
+}
+.parallax__layer--2 {
+    background-image: url('fears-blackhole-2.png'); 
+
+}
+.parallax__layer--3 {
+    background-image: url('fears-blackhole-3.png'); 
+
+}
+.parallax__layer--4 {
+    background-image: url('fears-blackhole-4.png'); 
+}
+
+.parallax__layer--5 {
+    background-image: url('fears-blackhole-5.png'); 
+}
+
+/* text stuff */
+
+.text {
+    width: 21vw; 
+/*    height: 400px; */
+    position: fixed; 
+    bottom: 0px; 
+    left: 0px; 
+    z-index: 1; 
+    padding: 30px; 
+    
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold; 
+    font-weight: 500;
+    line-height: 20.4px;
+
+}
+
+h1 {
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-size: 46px;
+    font-style: normal;
+    font-variant: normal; 
+    font-weight: 500;
+    line-height: 48.4px;
+}
