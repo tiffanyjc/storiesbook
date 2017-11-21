@@ -18,43 +18,87 @@ body {
     background-repeat: no-repeat; 
     width: 100vw; 
     height: 100vh;
-    position: fixed; 
-    z-index: -1; 
+    position: absolute; 
+/*    z-index: -1; */
 }
 
 .parallax__layer img {
     width: 100%; 
 }
-.parallax__layer--1 {
+
+/* story 1 */
+.parallax__layer-11 {
     background-image: url('fears-blackhole-1.png'); 
 }
-.parallax__layer--2 {
+.parallax__layer-12 {
     background-image: url('fears-blackhole-2.png'); 
 
 }
-.parallax__layer--3 {
+.parallax__layer-13 {
     background-image: url('fears-blackhole-3.png'); 
 
 }
-.parallax__layer--4 {
+.parallax__layer-14 {
     background-image: url('fears-blackhole-4.png'); 
 }
 
-.parallax__layer--5 {
+.parallax__layer-15 {
     background-image: url('fears-blackhole-5.png'); 
 }
 
+/* story 2 */
+
+.parallax__layer-21 {
+    background-image: url('fears-humanmonsters-1-01.png'); 
+}
+.parallax__layer-22 {
+    background-image: url('fears-humanmonsters-2-01.png'); 
+
+}
+.parallax__layer-23 {
+    background-image: url('fears-humanmonsters-3-01.png'); 
+
+}
+.parallax__layer-24 {
+    background-image: url('fears-humanmonsters-4-01.png'); 
+}
+
+.parallax__layer-25 {
+    background-image: url('fears-humanmonsters-5-01.png'); 
+}
+
+.parallax__layer-26 {
+    background-image: url('fears-humanmonsters-6-01.png'); 
+}
+
+
 /* text stuff */
 
-.text {
-    width: 21vw; 
-/*    height: 400px; */
-    position: fixed; 
-    bottom: 0px; 
-    left: 0px; 
+#1s {
     z-index: 1; 
-    padding: 30px; 
-    
+}
+
+#2s {
+    z-index: 2; 
+}
+
+.story {
+    position: absolute; 
+    left: 0px; 
+    width: 100vw; 
+    height: 100vh;
+    padding-bottom: 100px; 
+}
+
+
+.text {
+    width: 25vw; 
+    height: 100vh; 
+    position: relative; 
+    z-index: 1;     
+}
+
+.textcontent {
     font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
     font-size: 16px;
     font-style: normal;
@@ -62,7 +106,13 @@ body {
     font-weight: bold; 
     font-weight: 500;
     line-height: 20.4px;
-
+    
+    position: absolute; 
+    bottom: 0px; 
+    left: 0px; 
+    padding: 25px; 
+    padding-bottom: 40px; 
+/*    padding-left: 20px;*/
 }
 
 h1 {
