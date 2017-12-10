@@ -1,0 +1,152 @@
+<head>
+<link rel="stylesheet" type="text/css" href="css/main-2.css"> 
+<title>Storiesbook: 2</title>
+</head>
+<body>
+    <a id="home" href="index.html">HOME</a>
+    <div class="story" id="1s"> 
+        <div id="1t" class="text " data-type="parallax" data-depth=".8"> 
+            <div class="swatch"> 
+                <div class="color" id="c1"> </div>
+                <div class="color" id="c2"> </div>
+                <div class="color" id="c3"> </div>
+                <div class="color" id="c4"> </div>
+            </div>
+            <div class="textcontent "> 
+                <h1> 2 : What is your earliest memory?</h1>
+
+                <p>
+                    The first time I had a Wendy’s chicken nugget, I was five. I remember they used to come in those little containers – you know the ones they have fries in? 
+                </p>
+
+                <p>
+                    And my dad said, “This is a chicken nugget. Try one.”
+                </p>
+                <p>
+                    He dipped one in ketchup and put it in my mouth… and it was pure bliss. 
+                </p>
+                <p>
+                    That first moment of eating a chicken nugget dipped in ketchup – that was so… I’m trying to think of a synonym for orgasmic. It was so amazing. There’s absolutely no way I can forget it. 
+                </p>
+                <p class="storyteller">
+                    Sachin Pendse
+                </p>
+            </div>
+
+
+
+        </div>
+        <div class="parallax">
+            <div id="16" class="parallax__layer parallax__layer-16" data-type="parallax" data-depth=".1">
+                
+            <div id="15" class="parallax__layer parallax__layer-15" data-type="parallax" data-depth=".2">
+
+                <div id="14" class="parallax__layer parallax__layer-14" data-type="parallax" data-depth=".3">
+                </div>
+                <div id="13" class="parallax__layer parallax__layer-13" data-type="parallax" data-depth=".5">
+                </div>
+                <div id="12" class="parallax__layer parallax__layer-12" data-type="parallax" data-depth=".8">
+                </div>
+                <div id="11" class="parallax__layer parallax__layer-11" data-type="parallax" data-depth="1">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    
+    
+        
+<!--        story 2 -->
+    <div class="story" id="2s" data-type="parallax" data-depth=".8"> 
+        <div id="2t" class="text " data-type="parallax" data-depth="1"> 
+
+            <div class="swatch"> 
+                <div class="color" id="c5"> </div>
+                <div class="color" id="c6"> </div>
+                <div class="color" id="c7"> </div>
+                <div class="color" id="c8"> </div>
+            </div>
+            
+            <div class="textcontent"> 
+                <h1> 2 : What is your earliest memory?</h1>
+                
+                <p>
+                    I remember a lot of blue. 
+                </p>
+
+
+                <p>
+                    When I was younger – this was when I was only a few months old – I lived in Fort Lauderdale, Florida with my parents.
+                </p>
+                <p>
+                    Our house had a pool in the backyard, and my mom had left me sitting at the side of the pool. She must have turned her back only for a few seconds, but I guess I leaned too far forward and fell into the water. 
+
+                </p>
+                <p>
+                    Growing up, I was pretty afraid of going into deep water until my middle school in Taiwan made learning how to swim a mandatory gym unit. 
+                </p>
+
+                <p class="storyteller">
+                    Tiffany Chen
+                </p>
+
+            </div>
+
+
+
+        </div>
+        <div class="parallax">
+
+            <div id="26" class="parallax__layer parallax__layer-26" data-type="parallax" data-depth=".1"></div>
+
+            <div id="25" class="parallax__layer parallax__layer-25" data-type="parallax" data-depth=".6"></div>
+
+            <div id="24" class="parallax__layer parallax__layer-24" data-type="parallax" data-depth=".3">
+            </div>
+            <div id="23" class="parallax__layer parallax__layer-23" data-type="parallax" data-depth=".5">
+            </div>
+            <div id="22" class="parallax__layer parallax__layer-22" data-type="parallax" data-depth=".8">
+            </div>
+            <div id="21" class="parallax__layer parallax__layer-21" data-type="parallax" data-depth="1">
+            </div>
+
+        </div>
+    </div>
+    
+    
+    
+    <script> 
+        window.addEventListener("scroll", function() {
+            var topDistance = window.pageYOffset; 
+            var story1 = ["16", "15", "14", "13", "12", "11", "1t", "1s"]; 
+            var story2 = ["26", "25", "24", "23", "22", "21", "2t", "2s"]; 
+            var layers = story1.concat(story2); 
+            
+            for (l in layers) { 
+                var layer = document.getElementById(layers[l]); 
+                
+                // all test stuff 
+                var layerTop = layer.offsetTop; 
+                var story = parseInt(layers[l].charAt(0)); 
+                var scrollStart = (story - 1) * window.innerHeight; 
+                var scrollEnd = scrollStart + window.innerHeight; 
+                
+                if (topDistance >= scrollStart && topDistance < scrollEnd) {
+                    var depth = layer.dataset.depth; 
+                    var movement = -((topDistance - scrollStart) * depth); 
+                    var translate3d = 'translate3d(0, ' + movement + 'px, 0)'
+                    layer.style.webkitTransform = translate3d; 
+                    layer.style.mozTransform = translate3d; 
+                    layer.transform = translate3d; 
+                }
+               
+
+
+            }
+            });
+        
+        
+    </script>
+</body>
+

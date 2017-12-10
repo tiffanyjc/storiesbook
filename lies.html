@@ -1,0 +1,153 @@
+<head>
+<link rel="stylesheet" type="text/css" href="css/main-5.css"> 
+<title>Storiesbook: 5</title>
+</head>
+<body>
+    <a id="home" href="index.html">HOME</a>
+    <div class="story" id="1s"> 
+        <div id="1t" class="text " data-type="parallax" data-depth=".8"> 
+            
+            <div class="swatch"> 
+                <div class="color" id="c1"> </div>
+                <div class="color" id="c2"> </div>
+                <div class="color" id="c3"> </div>
+                <div class="color" id="c4"> </div>
+            </div>
+            
+            <div class="textcontent "> 
+                <h1>5 : What lies were you told as a child?</h1>
+
+                <p>
+                    My mom used to tell me that babies came from watermelons.
+                </p>
+                <p>
+                    So for the longest time I believed that if you cut open a watermelon, a baby would come out. 
+
+                </p>
+                
+                <p class="storyteller">
+                    Gillian Lee
+                </p>
+            </div>
+
+
+
+        </div>
+        <div class="parallax">
+            <div id="17" class="parallax__layer parallax__layer-17" data-type="parallax" data-depth=".1"></div>
+
+            <div id="16" class="parallax__layer parallax__layer-16" data-type="parallax" data-depth=".1"></div>
+
+            <div id="15" class="parallax__layer parallax__layer-15" data-type="parallax" data-depth=".6"></div>
+
+            <div id="14" class="parallax__layer parallax__layer-14" data-type="parallax" data-depth=".15">
+            </div>
+
+
+            <div id="13" class="parallax__layer parallax__layer-13" data-type="parallax" data-depth=".2">
+            </div>
+            <div id="12" class="parallax__layer parallax__layer-12" data-type="parallax" data-depth="3">
+            </div>
+            <div id="11" class="parallax__layer parallax__layer-11" data-type="parallax" data-depth=".1">
+
+            </div>
+            </div>
+
+        </div>
+    </div>
+    
+    
+    
+        
+<!--        story 2 -->
+    <div class="story" id="2s" data-type="parallax" data-depth=".8"> 
+        <div id="2t" class="text " data-type="parallax" data-depth="1"> 
+            
+            <div class="swatch"> 
+                <div class="color" id="c5"> </div>
+                <div class="color" id="c6"> </div>
+                <div class="color" id="c7"> </div>
+                <div class="color" id="c8"> </div>
+            </div>
+            
+            
+            <div class="textcontent"> 
+                <h1>5 : What lies were you told as a child?</h1>
+
+                <p>
+                    My cousin used to tell me that he had "fire eyes". 
+                </p>
+                <p>
+                    He said that normally his eyes looked like regular eyes, but sometimes – really quickly – they would start burning red. Apparently they burned so quickly that you could only ever see them by snapping a photo at the right time. 
+                </p>
+                <p>
+                    I didn't believe him until he showed me a picture and his eyes were red. Young Trent was terrified. 
+                </p>
+
+                <p class="storyteller">
+                    Trent Green
+                </p>
+
+
+            </div>
+
+
+
+        </div>
+        <div class="parallax">
+
+            
+            <div id="27" class="parallax__layer parallax__layer-27" data-type="parallax" data-depth="1"></div>
+            
+            <div id="26" class="parallax__layer parallax__layer-26" data-type="parallax" data-depth="1"></div>
+
+            <div id="25" class="parallax__layer parallax__layer-25" data-type="parallax" data-depth=".6"></div>
+
+            <div id="24" class="parallax__layer parallax__layer-24" data-type="parallax" data-depth=".3">
+            </div>
+            <div id="23" class="parallax__layer parallax__layer-23" data-type="parallax" data-depth=".5">
+            </div>
+            <div id="22" class="parallax__layer parallax__layer-22" data-type="parallax" data-depth=".8">
+            </div>
+            <div id="21" class="parallax__layer parallax__layer-21" data-type="parallax" data-depth="1">
+            </div>
+
+        </div>
+    </div>
+    
+    
+    
+    <script> 
+        window.addEventListener("scroll", function() {
+            var topDistance = window.pageYOffset; 
+            var story1 = ["17", "16", "15", "14", "13", "12", "11", "1t", "1s"]; 
+            var story2 = ["27",  "26", "25", "24", "23", "22", "21", "2t", "2s"]; 
+            var layers = story1.concat(story2); 
+            
+            for (l in layers) { 
+                var layer = document.getElementById(layers[l]); 
+                
+                // all test stuff 
+                var layerTop = layer.offsetTop; 
+                var story = parseInt(layers[l].charAt(0)); 
+                var scrollStart = (story - 1) * window.innerHeight; 
+                var scrollEnd = scrollStart + window.innerHeight; 
+                
+                if (topDistance >= scrollStart && topDistance < scrollEnd) {
+                    var depth = layer.dataset.depth; 
+                    var movement = -((topDistance - scrollStart) * depth); 
+                    var translate3d = 'translate3d(0, ' + movement + 'px, 0)'
+                    layer.style.webkitTransform = translate3d; 
+                    layer.style.mozTransform = translate3d; 
+                    layer.transform = translate3d; 
+                }
+               
+
+
+            }
+            });
+        
+        
+    </script>
+</body>
+

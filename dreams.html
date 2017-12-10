@@ -1,0 +1,139 @@
+<head>
+<link rel="stylesheet" type="text/css" href="css/main-3.css"> 
+<title>Storiesbook: 3</title>
+</head>
+<body>
+    
+    <a id="home" href="index.html">HOME</a>
+    
+    <div class="story" id="1s"> 
+        <div id="1t" class="text " data-type="parallax" data-depth=".8"> 
+            
+            <div class="swatch"> 
+                <div class="color" id="c1"> </div>
+                <div class="color" id="c2"> </div>
+                <div class="color" id="c3"> </div>
+                <div class="color" id="c4"> </div>
+            </div>
+            
+            <div class="textcontent "> 
+                <h1>3: Do you have recurring dreams?</h1>
+
+                <p>
+                    I don’t remember if I fell down a waterfall or if there was a waterfall near me – but I was near a waterfall, and I was underwater, and I was drowning
+                </p>
+                <p>
+                    And then dream Dom was like HEY I CAN’T BREATHE! 
+                </p>
+                <p>
+                    And I was trying to swim to the surface and stuff, and I can actually swim so this shouldn’t have been an issue, but I didn’t make it to the surface. And then dream Dom thought, “If I scream it’ll be okay.” 
+                </p>
+               
+                <p class="storyteller">
+                    Dominique Ariel
+                </p>
+            </div>
+
+
+
+        </div>
+        <div class="parallax">
+
+                <div id="13" class="parallax__layer parallax__layer-13" data-type="parallax" data-depth=".1">
+                </div>
+                <div id="12" class="parallax__layer parallax__layer-12" data-type="parallax" data-depth="3">
+                </div>
+                <div id="11" class="parallax__layer parallax__layer-11" data-type="parallax" data-depth="3">
+                </div>
+            </div>
+
+        </div>
+    
+    
+    
+        
+<!--        story 2 -->
+    <div class="story" id="2s" data-type="parallax" data-depth=".8"> 
+        <div id="2t" class="text " data-type="parallax" data-depth="1"> 
+            
+            <div class="swatch"> 
+                <div class="color" id="c5"> </div>
+                <div class="color" id="c6"> </div>
+                <div class="color" id="c7"> </div>
+                <div class="color" id="c8"> </div>
+            </div>
+            
+            <div class="textcontent"> 
+                <h1>3: Do you have recurring dreams?</h1>
+
+                <p>
+                    I walk into my parent's old house, and go straight to the bathroom. I look into the humongous mirror, and my mirror self pulls me into the mirror. 
+                </p>
+                <p>
+                    I wake up freaking out every single time. 
+                </p>
+                <p>
+                    I'm into my 20s now and haven't lived with my parents for a few years now. 
+                </p>
+
+                <p class="storyteller">
+                    Anonymous
+                </p>
+
+            </div>
+
+
+
+        </div>
+        <div class="parallax">
+
+            <div id="24" class="parallax__layer parallax__layer-24" data-type="parallax" data-depth=".3">
+            </div>
+            <div id="23" class="parallax__layer parallax__layer-23" data-type="parallax" data-depth=".5">
+            </div>
+            <div id="22" class="parallax__layer parallax__layer-22" data-type="parallax" data-depth=".8">
+            </div>
+            <div id="21" class="parallax__layer parallax__layer-21" data-type="parallax" data-depth="1">
+            </div>
+
+        </div>
+    </div>
+    
+    
+    
+    <script> 
+        window.addEventListener("scroll", function() {
+            var topDistance = window.pageYOffset; 
+            var story1 = [ "13", "12", "11", "1t", "1s"]; 
+//            var story1 = [ "11", "1t", "1s"]; 
+            var story2 = ["24", "23", "22", "21", "2t", "2s"]; 
+            var layers = story1.concat(story2); 
+            
+            for (l in layers) { 
+                var layer = document.getElementById(layers[l]); 
+                
+                // all test stuff 
+                var layerTop = layer.offsetTop; 
+                console.log(layer); 
+                var story = parseInt(layers[l].charAt(0)); 
+                var scrollStart = (story - 1) * window.innerHeight; 
+                var scrollEnd = scrollStart + window.innerHeight; 
+                
+                if (topDistance >= scrollStart && topDistance < scrollEnd) {
+                    var depth = layer.dataset.depth; 
+                    var movement = -((topDistance - scrollStart) * depth); 
+                    var translate3d = 'translate3d(0, ' + movement + 'px, 0)'
+                    layer.style.webkitTransform = translate3d; 
+                    layer.style.mozTransform = translate3d; 
+                    layer.transform = translate3d; 
+                }
+               
+
+
+            }
+            });
+        
+        
+    </script>
+</body>
+
