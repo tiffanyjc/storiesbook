@@ -28,22 +28,27 @@ body {
 
 /* story 1 */
 .parallax__layer-11 {
-    background-image: url('../fears-blackhole/fears-blackhole-1.png'); 
+    background-image: url('../fears-blackhole/fears-blackhole-01.svg'); 
+/*    background-image: url('../fears-blackhole/fears-blackhole-1.png'); */
 }
 .parallax__layer-12 {
-    background-image: url('../fears-blackhole/fears-blackhole-2.png'); 
+    background-image: url('../fears-blackhole/fears-blackhole-02.svg');
+/*    background-image: url('../fears-blackhole/fears-blackhole-2.png'); */
 
 }
 .parallax__layer-13 {
-    background-image: url('../fears-blackhole/fears-blackhole-3.png'); 
+    background-image: url('../fears-blackhole/fears-blackhole-03.svg');
+/*    background-image: url('../fears-blackhole/fears-blackhole-3.png'); */
 
 }
 .parallax__layer-14 {
-    background-image: url('../fears-blackhole/fears-blackhole-4.png'); 
+    background-image: url('../fears-blackhole/fears-blackhole-04.svg');
+/*    background-image: url('../fears-blackhole/fears-blackhole-4.png'); */
 }
 
 .parallax__layer-15 {
-    background-image: url('../fears-blackhole/fears-blackhole-5.png'); 
+    background-image: url('../fears-blackhole/fears-blackhole-05.svg');
+/*    background-image: url('../fears-blackhole/fears-blackhole-5.png'); */
 }
 
 /* story 2 */
