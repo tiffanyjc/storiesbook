@@ -1,31 +1,3 @@
-body {
-    height: 220vh; 
-    
-}
-
-.parallax {
-    height: 100vh;
-    width: 100vw; 
-    overflow: hidden;
-    overflow-y: hidden;
-    position: absolute; 
-    top: 0px; 
-    right: 0px; 
-}
-.parallax__layer {
-    background-position: bottom right; 
-    background-size:contain; 
-    background-repeat: no-repeat; 
-    width: 100vw; 
-    height: 100vh;
-    position: absolute; 
-/*    z-index: -1; */
-}
-
-.parallax__layer img {
-    width: 100%; 
-}
-
 /* story 1 */
 .parallax__layer-11 {
     background-image: url('../memory-nugs/earlymemory-nugs1-01.png'); 
@@ -77,59 +49,6 @@ body {
 }
 
 
-/* text stuff */
-
-.story {
-/*
-    position: absolute; 
-    left: 0px; 
-*/
-    position: relative; 
-    width: 100vw; 
-    height: 100vh;
-/*    padding-bottom: 100px; */
-}
-
-#1s {
-    z-index: 1; 
-    position: absolute; 
-    top: 0px; 
-    display: none; 
-}
-
-#2s {
-    z-index: 2; 
-    position: absolute; 
-    top: 100vh !important; 
-}
-
-#3s {
-    z-index: 3; 
-}
-
-
-.text {
-    width: 25vw; 
-    height: 100vh; 
-    position: relative; 
-    z-index: 1;     
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center;
-
-}
-
-.swatch {
-    width: 100%; 
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center; 
-}
-
-.color {
-    height: 20px; 
-    width: 10px; 
-}
 
 #c1 {
     background-color: #679fa0; 
@@ -155,56 +74,4 @@ body {
 }
 #c8 {
     background-color: #c1a372; 
-}
-
-.textcontent {
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-    font-size: 16px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: bold; 
-    font-weight: 500;
-    line-height: 20.4px;
-
-    /*
-    position: absolute; 
-    bottom: 0px; 
-    left: 0px; 
-    */
-    padding: 25px; 
-    /*    padding-bottom: 20px; */
-    /*    padding-left: 20px;*/
-}
-
-h1 {
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-    font-size: 46px;
-    font-style: normal;
-    font-variant: normal; 
-    font-weight: 500;
-    line-height: 48.4px;
-    letter-spacing: -1px;
-}
-
-
-.storyteller {
-    text-align: right; 
-}
-
-#m1, #m3 {
-    background-color: black; 
-}
-#home {
-    position: fixed; 
-    bottom: 10px; 
-    left: 10px; 
-    opacity: .8; 
-    letter-spacing: 2px; 
-    z-index: 100; 
-    color: black; 
-}
-
-#home:hover {
-    opacity: 1; 
-    color: #e83161; 
 }

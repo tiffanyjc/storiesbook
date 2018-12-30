@@ -1,0 +1,178 @@
+/* mobile appearance */
+
+body {
+    margin: 0px; 
+    padding: 0px;
+}
+
+
+/* story column */
+
+
+.story {
+    position: relative; 
+    width: 100vw; 
+    display: flex; 
+    flex-direction: column-reverse; 
+    /*    height: 500px; */
+}
+
+.text {
+    margin-top: 50px; 
+    width: 100vw; 
+    position: relative; 
+    z-index: 1;     
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+
+}
+
+.swatch {
+    width: 100%; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+}
+
+.parallax {
+    width: 100vw;
+    height: 300px; 
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+.parallax__layer {
+    background-position: top right; 
+    background-size: calc(130vw); 
+    background-repeat: no-repeat; 
+    width: 100vw; 
+    height: calc(130vw * 763 / 1363);
+    position: absolute; 
+}
+
+
+.parallax__layer img {
+    width: 100%; 
+}
+
+
+
+/* text stuff */
+
+
+
+#1s {
+    z-index: 1; 
+    position: absolute; 
+    top: 0px; 
+    display: none; 
+}
+
+#2s {
+    z-index: 2; 
+    position: absolute; 
+    top: 100vh !important; 
+}
+
+#3s {
+    z-index: 3; 
+}
+
+
+.color {
+    height: 20px; 
+    width: 10px; 
+}
+
+
+
+.textcontent {
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold; 
+    font-weight: 500;
+    line-height: 20.4px;
+    padding: 25px; 
+}
+
+h1 {
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-size: 46px;
+    font-style: normal;
+    font-variant: normal; 
+    font-weight: 500;
+    line-height: 48.4px;
+    letter-spacing: -1px;
+}
+
+.storyteller {
+    text-align: right; 
+}
+#home {
+    position: fixed; 
+    bottom: 10px; 
+    left: 10px; 
+    opacity: .8; 
+    letter-spacing: 2px; 
+    z-index: 100; 
+    color: black; 
+}
+
+#home:hover {
+    opacity: 1; 
+    color: #e83161; 
+}
+
+
+/* FULL SCREEN media query */
+
+
+
+@media only screen and (min-width: 500px)  {
+
+    body {
+        height: 220vh; 
+
+    }
+
+    .parallax {
+        height: 100vh;
+        width: 100vw; 
+        overflow: hidden;
+        overflow-y: hidden;
+        position: absolute; 
+        top: 0px; 
+        right: 0px; 
+    }
+    .parallax__layer {
+        background-position: bottom right; 
+        background-size:contain; 
+        background-repeat: no-repeat; 
+        width: 100vw; 
+        height: 100vh;
+        position: absolute; 
+        /*    z-index: -1; */
+    }
+
+    .story {
+        position: relative; 
+        width: 100vw; 
+        height: 100vh;
+        /*    padding-bottom: 100px; */
+    }
+
+    .text {
+        width: 25vw; 
+        height: 100vh; 
+        position: relative; 
+        z-index: 1;     
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center;
+
+    }
+
+}
